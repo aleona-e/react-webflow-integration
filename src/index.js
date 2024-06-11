@@ -1,14 +1,16 @@
-import ReactDOM from 'react-dom'; 
+import React, {Component} from 'react'
 
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+class App extends Component {
+ render() {
+   return (
+     <div>This is a React component inside of Webflow!</div>
+  )
+}
+}
 
-reportWebVitals();
+ReactDOM.render(
+React.createElement(App, {}, null),
+document.getElementById('react-target')
+)
